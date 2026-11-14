@@ -209,3 +209,34 @@ footer { text-align: center; padding: 35px 12px; font-size: 12px; color: #755b45
   padding-bottom: 8px;
   border-bottom: 5px double #f58b20;
 }
+
+/* CONTACT：中央揃え */
+#contact {
+  text-align: center;
+}
+
+/* 主催者名 */
+#contact > p {
+  margin: 18px 0 32px;
+}
+
+/* Instagram画像リンク */
+#contact > a {
+  display: block;
+  width: min(100%, 340px);
+  margin: 0 auto;
+  line-height: 0;
+}
+
+/* ゴリカブ画像 */
+#contact > a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.2s ease;
+}
+
+/* マウスを重ねたとき */
+#contact > a:hover img {
+  opacity: 0.8;
+}
