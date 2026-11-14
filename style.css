@@ -459,3 +459,29 @@ footer {
     width: min(88%, 330px);
   }
 }
+
+/* NEXT MEETING：最新情報への案内 */
+.next-event-info {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.next-event-info p {
+  margin: 0 0 10px;
+  color: #191919;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.next-event-info a {
+  color: #009da5;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.next-event-info a:hover {
+  color: #f58b20;
+  text-decoration: underline;
+}
