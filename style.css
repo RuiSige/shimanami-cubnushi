@@ -2,7 +2,7 @@
 :root {
   --orange: #f58b20;
   --teal: #009da5;
-  --beige: #f8e7ca;
+  --beige: #ffffff;
   --ink: #191919;
 }
 
@@ -80,10 +80,10 @@ body {
 .next-event p { font-size: clamp(23px, 3vw, 34px); font-weight: 700; color: #fa650e; margin: 0; }
 
 /* 歴代ステッカー */
-.gallery { background: var(--beige); padding: 48px 24px 65px; }
+.gallery { background: #fff; padding: 48px 12px 65px; }
 .gallery h2 { margin: 0; font-size: 19px; text-align: center; letter-spacing: .09em; }
 .gallery-lead { margin: 9px 0 38px; text-align: center; font-size: 13px; }
-.sticker-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 18px; row-gap: 36px; }
+.sticker-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 8px; row-gap: 24px; }
 .sticker-card { min-width: 0; text-align: center; }
 .sticker-image-button {
   display: block;
@@ -110,15 +110,19 @@ body {
   justify-content: center;
   align-items: center;
   padding: 12px;
-  background: rgb(0 0 0 / 70%);
+  flex-direction: column;
+  gap: 7px;
+  text-align: center;
+  background: rgb(0 0 0 / 72%);
   color: #fff;
   font-size: clamp(10px, 1.1vw, 14px);
   opacity: 0;
+  pointer-events: none;
   transition: opacity .2s ease;
 }
 .sticker-image-button:hover .sticker-date-overlay,
 .sticker-image-button:focus-visible .sticker-date-overlay { opacity: 1; }
-.sticker-dots { min-height: 24px; display: flex; align-items: center; justify-content: center; gap: 9px; margin: 7px 0 2px; }
+.sticker-dots { min-height: 24px; display: flex; align-items: center; justify-content: center; gap: 9px; margin: 6px 0 0; }
 .sticker-dot { width: 9px; height: 9px; border: 0; border-radius: 50%; background: #cfc8b8; padding: 0; cursor: pointer; }
 .sticker-dot[aria-pressed="true"] { background: #00566a; }
 .sticker-title { font-size: 12px; font-weight: 700; margin: 5px 0; }
@@ -150,7 +154,7 @@ footer { text-align: center; padding: 35px 12px; font-size: 12px; color: #755b45
   .sidebar nav { flex-direction: row; flex-wrap: wrap; gap: 12px 18px; }
   .sidebar a { font-size: 12px; }
   .next-event { padding: 42px 12px; }
-  .gallery { padding: 35px 16px 45px; }
-  .sticker-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 27px 16px; }
+  .gallery { padding: 35px 10px 45px; }
+  .sticker-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 8px; }
   .sticker-date-overlay { font-size: 12px; }
 }

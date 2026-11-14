@@ -123,14 +123,15 @@ meetings.forEach((meeting) => {
   const imageButton = document.createElement("button");
   imageButton.type = "button";
   imageButton.className = "sticker-image-button";
-  imageButton.setAttribute("aria-label", `第${meeting.number}回 ${meeting.date} 詳細を見る`);
+  imageButton.setAttribute("aria-label", `第${meeting.number}回 / ${meeting.code === "06Again" ? "06回 Again!" : meeting.code + "回"} ${meeting.place} ${meeting.date} チラシ画像を開く`);
   const image = document.createElement("img");
   image.src = meeting.stickers[0];
   image.alt = `第${meeting.number}回 ミーティングロゴ`;
   image.loading = "lazy";
   const overlay = document.createElement("span");
   overlay.className = "sticker-date-overlay";
-  overlay.textContent = meeting.date;
+  const meetingLabel = `第${meeting.number}回 / ${meeting.code === "06Again" ? "06回 Again!" : meeting.code + "回"}`;
+  overlay.innerHTML = `<strong>${meetingLabel}</strong><span>${meeting.place}</span><span>${meeting.date}</span><span>チラシ画像</span>`;
   imageButton.append(image, overlay);
 
   const dots = document.createElement("div");
@@ -151,16 +152,6 @@ meetings.forEach((meeting) => {
     });
   }
 
-  const title = document.createElement("p");
-  title.className = "sticker-title";
-  title.textContent = `第${meeting.number}回 / ${meeting.code === "06Again" ? "06回 Again!" : meeting.code + "回"}`;
-  const place = document.createElement("p");
-  place.className = "sticker-place";
-  place.textContent = meeting.place;
-  const detail = document.createElement("button");
-  detail.type = "button";
-  detail.className = "detail-button";
-  detail.textContent = "詳細を見る";
   const openFlyer = () => {
     dialogTitle.textContent = `第${meeting.number}回 / ${meeting.place}`;
     dialogDate.textContent = meeting.date;
@@ -169,8 +160,7 @@ meetings.forEach((meeting) => {
     dialog.showModal();
   };
   imageButton.addEventListener("click", openFlyer);
-  detail.addEventListener("click", openFlyer);
-  card.append(imageButton, dots, title, place, detail);
+  card.append(imageButton, dots);
   grid.append(card);
 });
 
