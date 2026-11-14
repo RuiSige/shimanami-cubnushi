@@ -485,3 +485,38 @@ footer {
   color: #f58b20;
   text-decoration: underline;
 }
+
+/* ==============================
+   セクション間の波線
+============================== */
+
+.next-event::after,
+.gallery::after,
+#about::after {
+  content: "";
+  display: block;
+  width: min(65%, 320px);
+  height: 18px;
+  margin: 55px auto 0;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='18' viewBox='0 0 60 18'%3E%3Cpath d='M0 9 Q15 1 30 9 T60 9' fill='none' stroke='%23009da5' stroke-width='2.5'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+/* セクション下の通常の区切り線を削除 */
+.next-event,
+.gallery,
+#about {
+  border-bottom: none;
+}
+
+/* スマートフォン */
+@media (max-width: 700px) {
+  .next-event::after,
+  .gallery::after,
+  #about::after {
+    width: min(70%, 240px);
+    margin-top: 40px;
+  }
+}
