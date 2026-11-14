@@ -123,7 +123,7 @@ meetings.forEach((meeting) => {
   const imageButton = document.createElement("button");
   imageButton.type = "button";
   imageButton.className = "sticker-image-button";
-  imageButton.setAttribute("aria-label", `第${meeting.number}回 / ${meeting.code === "06Again" ? "06回 Again!" : meeting.code + "回"} ${meeting.place} ${meeting.date} チラシ画像を開く`);
+  imageButton.setAttribute("aria-label", `第${meeting.number}回 / ${meeting.code === "06Again" ? "06回 Again!" : meeting.code + "回"} ${meeting.place} ${meeting.date} チラシを見る`);
   const image = document.createElement("img");
   image.src = meeting.stickers[0];
   image.alt = `第${meeting.number}回 ミーティングロゴ`;
@@ -131,7 +131,7 @@ meetings.forEach((meeting) => {
   const overlay = document.createElement("span");
   overlay.className = "sticker-date-overlay";
   const meetingLabel = `第${meeting.number}回 / ${meeting.code === "06Again" ? "06回 Again!" : meeting.code + "回"}`;
-  overlay.innerHTML = `<strong>${meetingLabel}</strong><span>${meeting.place}</span><span>${meeting.date}</span><span>チラシ画像</span>`;
+  overlay.innerHTML = `<strong>${meetingLabel}</strong><span>${meeting.place}</span><span>${meeting.date}</span><span>チラシを見る ↗</span>`;
   imageButton.append(image, overlay);
 
   const dots = document.createElement("div");
