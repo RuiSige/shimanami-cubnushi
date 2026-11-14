@@ -196,3 +196,16 @@ footer { text-align: center; padding: 35px 12px; font-size: 12px; color: #755b45
   .contact-section h2 { margin-bottom: 40px; }
   .contact-illustration { width: min(88%, 330px); margin-top: 46px; }
 }
+
+/* ABOUTの見出しをCONTACTと統一 */
+#about > h2 {
+  color: #f58b20;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 48px;
+  padding-bottom: 8px;
+  border-bottom: 5px double #f58b20;
+}
