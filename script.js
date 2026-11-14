@@ -113,6 +113,9 @@ const grid = document.querySelector("#sticker-grid");
 const dialog = document.querySelector("#flyer-dialog");
 const dialogTitle = document.querySelector("#dialog-title");
 const dialogDate = document.querySelector("#dialog-date");
+
+dialogTitle.style.display = "none";
+dialogDate.style.display = "none";
 const dialogImage = document.querySelector("#dialog-image");
 
 meetings.forEach((meeting) => {
@@ -153,8 +156,6 @@ meetings.forEach((meeting) => {
   }
 
   const openFlyer = () => {
-    dialogTitle.textContent = `第${meeting.number}回 / ${meeting.place}`;
-    dialogDate.textContent = meeting.date;
     dialogImage.src = meeting.flyer;
     dialogImage.alt = `第${meeting.number}回 ${meeting.place} 開催チラシ`;
     dialog.showModal();
