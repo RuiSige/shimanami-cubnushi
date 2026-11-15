@@ -520,3 +520,55 @@ footer {
     margin-top: 40px;
   }
 }
+
+/* ==============================
+   ヘッダー下：走るカブ
+============================== */
+
+.cub-animation {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+  background-color: #fff;
+  background-image: url("images/shop-TOPイラスト.png");
+  background-repeat: repeat-x;
+  background-size: auto 105px;
+  background-position: 0 center;
+
+  animation: cub-running 30s linear infinite;
+}
+
+/* 左から右へ流れる */
+@keyframes cub-running {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: 1014px center;
+  }
+}
+
+/* スマートフォン */
+@media (max-width: 700px) {
+  .cub-animation {
+    height: 90px;
+    background-size: auto 70px;
+    animation-name: cub-running-mobile;
+  }
+
+  @keyframes cub-running-mobile {
+    from {
+      background-position: 0 center;
+    }
+    to {
+      background-position: 679.2px center;
+    }
+  }
+}
+
+/* 動きを減らす設定の方には静止表示 */
+@media (prefers-reduced-motion: reduce) {
+  .cub-animation {
+    animation: none;
+  }
+}
