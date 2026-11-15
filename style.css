@@ -269,7 +269,8 @@ body {
 ============================== */
 
 #about > h2,
-#contact > h2 {
+#contact > h2,
+#goods > h2 {
   color: var(--orange);
   font-size: clamp(28px, 3vw, 38px);
   font-weight: 900;
