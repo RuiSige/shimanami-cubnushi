@@ -572,3 +572,30 @@ footer {
     animation: none;
   }
 }
+
+/* GOODS */
+.goods-content {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.goods-content a {
+  display: inline-block;
+  width: min(100%, 250px);
+}
+
+.goods-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.2s ease;
+}
+
+.goods-content a:hover .goods-logo {
+  opacity: 0.7;
+}
+
+.goods-content p {
+  margin-top: 22px;
+  line-height: 1.9;
+}
