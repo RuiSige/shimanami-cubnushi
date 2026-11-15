@@ -600,3 +600,12 @@ footer {
   margin-top: 22px;
   line-height: 1.9;
 }
+
+/* サイドメニュー：ホバー時に二重下線 */
+.sidebar a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-color: #f58b20;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
